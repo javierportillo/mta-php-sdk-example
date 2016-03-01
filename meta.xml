@@ -7,7 +7,7 @@
         description="Resource to show an example of functions to call from PHP"
     />
 
-    <script src="functions.lua" type="server" />
+    <script src="lua/functions.lua" type="server" />
 
-    <export function="functionCalledFromPHP" type="server" />
+    <export function="functionCalledFromPHP" http="true" />
 </meta>
