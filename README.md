@@ -15,3 +15,5 @@ There are a couple of things that you need to make sure you have set up -*unless
 * You have an account with admin rights on the server (you can [create](https://wiki.multitheftauto.com/wiki/Server_Manual#Adding_administrators) a new account just for this system).
 
 Alright, I hope I didn't forget something, cause I did forgot some of those while doing this and that was a lot of *fun* hours figuring that out!
+
+Note: I named this resouce as 'phpsdk' on my local server, if you see that name, just replace it with the name of your resource.
