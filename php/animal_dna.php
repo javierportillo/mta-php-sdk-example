@@ -4,13 +4,13 @@ include_once('mtaphpsdk_0.4/mta_sdk.php');
 /*
  * This page is not meant to be loaded on a web browser. You have to be cautious
  * of how this code would behave if it gets loaded on a browser. Preferably,
- * you would use this file exclusively to handle conections comming from MTA; It
- * is adviced in the PHP SDK wiki that you should not output any data to the
+ * you would use this file exclusively to handle connections coming from MTA; It
+ * is advised in the PHP SDK wiki that you should not output any data to the
  * screen, but you can be as creative as you want with your implementation.
  */
 
 /*
- * getInput colects all the argumets passed from the callRemote function and
+ * getInput collects all the arguments passed from the callRemote function and
  * stores them in an array.
  */
 $remote_input = mta::getInput();
@@ -19,7 +19,7 @@ $remote_input = mta::getInput();
  * The next block of code is used to select a database depending on what animal
  * you selected in the /getdna command. If you are wondering about why did I
  * choose to make this animal dna example, it's because that was the only publicly
- * accesible database I could find on the internet. It was actualy very interesting
+ * accesible database I could find on the internet. It was actually very interesting
  * to find out that there's a public mysql database full of dna sequencing related stuff.
  */
 
@@ -29,9 +29,10 @@ if ($animal == 'alpaca') {
 } elseif ($animal == 'dolphin') {
     $db_name = 'tursiops_truncatus_core_83_1';
 } else {
-    mta::doReturn($animal, 'Catastrophic Failure: Critical system files have been compromised. Please restart your computer.');
+    mta::doReturn($animal, 'Data for ' . $animal . ' not found.');
     exit(1);
 }
+
 /*
  * The code below connects to the database. I mean, you could have just connected
  * directly from MTA using the SQL functions... but whatever, I guess. :P
